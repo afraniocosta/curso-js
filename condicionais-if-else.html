@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Curso Javascript - condicionais if else</title>
+    </head>
+    <body>
+        <script>
+        
+        function retornaSexo (sexo) {
+            // M, F
+            // Masculino, Feminino
+
+
+            // uso == pq quero verificar a igualdade do valor
+            // ex: 1 == '1'. true pq 2 sinais de igual avaliam apenas se o valor contido nas duas variáveis é igual e são. Já o tipo é diferente.
+            // ex: 1 === '1'. false, pq 3 sinais de igual avaliam se o valor e o tipo são iguais e não são.
+            if ( sexo === 'M' ) {
+                return 'Masculino';
+            } else if ( sexo === 'F' ) {
+                return 'Feminino';
+            } else {
+                return 'outro';
+            }
+        }
+
+        var resultado = retornaSexo('M'); 
+        console.log(resultado);
+       
+        </script>
+    </body>
+</html>
