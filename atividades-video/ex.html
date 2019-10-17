@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício</title>
+</head>
+
+
+<body>
+
+    <input type="text" name="nome"><br>
+    <button class="botao">enviar</button>
+    
+    <script>
+    
+        var inputElement = document.querySelector('input[name=nome]')
+        var btnElement = document.querySelector('button.botao')
+        
+        btnElement.onclick = function(){
+           var text = inputElement.value;
+           alert(text);
+        }
+
+    </script>
+
+
+</body>
+</html>
