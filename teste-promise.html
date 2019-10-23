@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste promise</title>
+</head>
+<body>
+
+
+
+<script>
+
+    // Promise é um objeto em JavaScript e objetos em JavaScript podem ser criados ou instânciados através da palavra reservada new
+    // Um detalhe sobre Promises é que na sua criação precisamos passar como parâmetro uma função que será responsável por resolver (resolve) ou rejeitar (reject) a Promise
+
+    function fazRequisicao(resolver = true){
+
+        return new Promise((resolve, reject)=>{
+
+            setTimeout(()=>{
+                if (!resolver) {
+                    if (!resolver) {
+                throw new Error("Deu erro");
+                }
+                resolve("Promise resolvida");
+            }, 3000);
+
+        });
+
+    }
+
+    fazRequisicao();
+    
+
+</script>
+    
+</body>
+</html>

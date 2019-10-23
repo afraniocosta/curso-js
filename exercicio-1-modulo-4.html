@@ -12,17 +12,42 @@
 
 <script>
 
+// Promise é um objeto em JavaScript e objetos em JavaScript podem ser criados ou instânciados através da palavra reservada new
+// Um detalhe sobre Promises é que na sua criação precisamos passar como parâmetro uma função que será responsável por resolver (resolve) ou rejeitar (reject) a Promise
+
+// Estados da promessa
+// Uma promessa deve estar em um dos três estados: pendente, cumprida ou rejeitada.
+
+// - Quando pendente, uma promessa:
+// pode fazer a transição para o estado cumprido ou rejeitado.
+// - Quando cumprida, uma promessa:
+// não deve fazer a transição para nenhum outro estado.
+// deve ter um valor que não deve mudar.
+// - Quando rejeitada, uma promessa:
+// não deve fazer a transição para nenhum outro estado.
+// deve ter um motivo, que não deve mudar.
+// Aqui, "não deve mudar" significa identidade imutável (ie ===), mas não implica imutabilidade profunda.
+
+
+
 function checaIdade(idade) {
     // Retornar uma promise
+    return new Promise((resolve, reject)=>{
+        setTimeout((idade) => resolve("Whoops!"), 3000);
+    })
+    
     }
+
     checaIdade(20)
+
     .then(function() {
     console.log("Maior que 18");
     })
+
     .catch(function() {
     console.log("Menor que 18");
- });
 
+    });
 </script>
     
 </body>
